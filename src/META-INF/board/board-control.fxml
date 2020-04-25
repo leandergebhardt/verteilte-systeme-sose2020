@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE VBox>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="control-pane">
+	<HBox styleClass="competitor-pane">
+		<TextField styleClass="competitor-field" text="Human" />
+		<Label styleClass="competitor-label" text="vs." />
+		<TextField styleClass="competitor-field" text="Computer" />
+	</HBox>
+
+	<HBox styleClass="rating-pane">
+		<Label styleClass="rating-label" text="Rating" />
+		<Slider styleClass="rating-slider" min="-10.0" max="+10.0" showTickLabels="true" showTickMarks="true" blockIncrement="1" snapToTicks="false" style="-fx-background-color: transparent;" HBox.hgrow="SOMETIMES">
+			<tooltip><Tooltip /></tooltip>
+		</Slider>	
+	</HBox>
+
+	<Label styleClass="history-label" text="History" />
+	<TextArea styleClass="history-area" editable="false" focusTraversable="false" HBox.hgrow="SOMETIMES" VBox.vgrow="ALWAYS" />
+
+	<HBox styleClass="button-pane">
+		<Button styleClass="undo-button" text="undo">
+			<tooltip><Tooltip text="take back the last move" /></tooltip>
+		</Button>
+		<Button styleClass="reset-button" text="reset">
+			<tooltip><Tooltip text="reset the current board" /></tooltip>
+		</Button>
+	</HBox>
+</VBox>

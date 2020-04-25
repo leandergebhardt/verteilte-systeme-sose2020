@@ -1,0 +1,23 @@
+.root-pane {
+	-fx-padding: 2px;
+	-fx-spacing: 2px;
+}
+
+.control-pane {
+	-fx-spacing: 5px;
+	-fx-alignment: center-left;
+}
+
+.sudoku-pane {
+	-fx-hgap: 5px;
+	-fx-vgap: 5px;
+}
+
+TextField.cell-field {
+    -fx-min-width: 26;
+    -fx-max-width: 26;
+}
+
+TextField.immutable {
+	-fx-text-fill: blue;
+}
