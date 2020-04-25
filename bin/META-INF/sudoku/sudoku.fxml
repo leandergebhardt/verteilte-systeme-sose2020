@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BorderPane>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root-pane">
+	<top>
+		<HBox styleClass="control-pane">
+			<Label styleClass="magnitude-label" text="magnitude" />
+
+			<ChoiceBox styleClass="magnitude-selector" value="3" HBox.hgrow="ALWAYS">
+				<tooltip><Tooltip text="create a new sudoku with the chosen magnitude" /></tooltip>
+				<items>
+					<FXCollections fx:factory="observableArrayList">
+						<String fx:value="2" />
+						<String fx:value="3" />
+						<String fx:value="4" />
+						<String fx:value="5" />
+						<String fx:value="6" />
+					</FXCollections>
+				</items>
+			</ChoiceBox>
+
+			<Button styleClass="create-button" text="create">
+				<tooltip><Tooltip text="create a new sudoku" /></tooltip>
+			</Button>
+			<Button styleClass="reset-button" text="reset">
+				<tooltip><Tooltip text="reset the current sudoku" /></tooltip>
+			</Button>
+			<Button styleClass="solve-button" text="solve">
+				<tooltip><Tooltip text="solve the current sudoku" /></tooltip>
+			</Button>
+		</HBox>
+	</top>
+
+	<center>
+		<ScrollPane>
+			<content><GridPane styleClass="sudoku-pane" /></content>
+		</ScrollPane>
+	</center>
+</BorderPane>
